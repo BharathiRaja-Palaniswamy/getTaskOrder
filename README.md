@@ -33,3 +33,5 @@ If the installation was successful, you should be able to run the following comm
     $ git clone https://github.com/BharathiRaja-Palaniswamy/getTaskOrder.git
     $ cd getTaskOrder
     $ node index.js
+      Now you can input the Task details. Multiple task group can be inputed .
+      Once all the task details are entered please enter **CTRL + C** for the program to execute further.
