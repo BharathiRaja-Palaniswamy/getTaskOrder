@@ -4,7 +4,7 @@ const { error } = require('console');
 /**
  * Master function to validate task formats and determine Task ordering
  * @param {Array} text input text stream
- * @returns 
+ * @returns {String} Task order
  */
 function processTasks(input) {
   try {
@@ -55,7 +55,11 @@ function processTasks(input) {
 }
 
 
-
+/**
+*Function to determine the order of task
+* @param {taskMap} Map that contains task and its dependencies
+* @returns {Array} order of tasks.
+*/
 function topologicalSort(taskMap) {
   try {
   const executed = new Set();
@@ -84,8 +88,8 @@ function topologicalSort(taskMap) {
 }
 
 /**
- * 
- * @returns {Promise} 
+ * Function to read input from the user
+ * @returns {Promise} Array of lines inputted by the user
  */
 function readInput() {
     try {
